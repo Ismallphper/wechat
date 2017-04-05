@@ -1,13 +1,13 @@
-//Î¢ĞÅµÇÂ½
+//å¾®ä¿¡ç™»é™†
 
-    private $app_id = 'wxxxxxxxxxxxx';//ÌîĞ´×Ô¼ºµÄ
-    private $app_secret = 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx';//ÌîĞ´×Ô¼ºµÄ
+    private $app_id = 'wxxxxxxxxxxxx';//å¡«å†™è‡ªå·±çš„
+    private $app_secret = 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx';//å¡«å†™è‡ªå·±çš„
  
     /**
-     * »ñÈ¡Î¢ĞÅÊÚÈ¨Á´½Ó
+     * è·å–å¾®ä¿¡æˆæƒé“¾æ¥
      * 
-     * @param string $redirect_uri Ìø×ªµØÖ·
-     * @param mixed $state ²ÎÊı
+     * @param string $redirect_uri è·³è½¬åœ°å€
+     * @param mixed $state å‚æ•°
      */
     public function get_authorize_url($redirect_uri = '', $state = '')
     {
@@ -16,9 +16,8 @@
     }
     
     /**
-     * Í¨¹ıcode»ñÈ¡ÍøÒ³ÊÚÈ¨token
-     * 
-     * @param string $code Í¨¹ıget_authorize_url»ñÈ¡µ½µÄcode
+ Â  Â  * é€šè¿‡codeè·å–ç½‘é¡µæˆæƒtoken upload y_user list * 
+     * @param string $code é€šè¿‡get_authorize_urlè·å–åˆ°çš„code
      */
     public function get_access_token($app_id = '', $app_secret = '', $code = '')
     {
@@ -39,7 +38,7 @@
     }
     
     /**
-     * »ñÈ¡ÊÚÈ¨ºóµÄÎ¢ĞÅÓÃ»§ĞÅÏ¢
+     * è·å–æˆæƒåçš„å¾®ä¿¡ç”¨æˆ·ä¿¡æ¯
      * 
      * @param string $access_token
      * @param string $open_id
@@ -102,7 +101,7 @@
 
 
 
-//ÔÚ¸öÈË×ÊÁÏÉÏ´«·½·¨ÖĞÅĞ¶ÏÊÇ·ñÊÇÎ¢ĞÅµÇÂ¼   ²¢¼ÇÂ¼wechat_id
+//åœ¨ä¸ªäººèµ„æ–™ä¸Šä¼ æ–¹æ³•ä¸­åˆ¤æ–­æ˜¯å¦æ˜¯å¾®ä¿¡ç™»å½•   å¹¶è®°å½•wechat_id
  	$user = M('y_user');
         if (isset($_POST['wechat_id'])) {
             $wechatid = $_POST['wechat_id'];
